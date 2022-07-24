@@ -1,0 +1,49 @@
+---
+title: " SEMESTER EXAM ANANDHABALA FILE "
+output: html_notebook
+---
+```{r}
+# READ THE PACKAGES
+library(ggplot2)
+```
+
+```{r}
+# read the data set of diabetis data set
+diabets <- read.csv(file.choose())
+
+```
+
+```{r}
+# find the dimension of diabet dataset.
+dim(diabets)
+```
+```{r}
+# get the information of diabet datset.
+str(diabets)
+```
+```{r}
+# get the stat wise data for diabets
+summary(diabets)
+```
+```{r}
+# find the which categories is mostly come.
+barplot(table(diabets$age))
+```
+```{r}
+barplot(table(diabets$gender))
+```
+```{r}
+#  find which people are mostly admitted in a hospital
+barplot(table(diabets$race))
+```
+```{r}
+# any relation between age and readmitted
+cor(table(diabets$age,diabets$readmitted))
+```
+```{r}
+# display the relation of both columns in box plot chart
+boxplot(cor(table(diabets$age,diabets$readmitted)))
+```
+# conclusion
+# mostly caucasian country people admitted and also compared to men womens are mostly affected by the diabets.
+# and also greater than > 30 age people of womens are affected by the diabets.
